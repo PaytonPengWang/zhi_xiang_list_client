@@ -16,6 +16,12 @@
     border-bottom: 1px solid #eee;
 }
 
+.groupName{
+  font-weight: bold;
+}
+
+
+
 .checkbox{
   text-align: left;
   margin-left:0rpx;
@@ -29,12 +35,18 @@
 
 .list_item_title {
   margin-left: 15rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .list_item_date {
-  width: 130rpx;
+  width: 75px;
   font-size: 12px;
   color:#aaa;
+}
+.list_item_date.due{
+  color: red;
 }
 
 
