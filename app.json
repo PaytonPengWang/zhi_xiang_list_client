@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/list/list"
+  ],
+  "window": {
+    "navigationBarTitleText": "智享清单"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "今日代办"
+      },
+      {
+        "pagePath" : "pages/list/list",
+        "text" : "清单管理"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
