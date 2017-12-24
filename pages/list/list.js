@@ -20,6 +20,9 @@ Page({
   onShow : function() {
     getTodayLists((ret) => {
 
+      todayListDatas = [];
+      groupIndex = {};
+
 
       for(var listItem of ret){
         var listGroupId = listItem.listGroup._id;
@@ -39,11 +42,14 @@ Page({
 
         var dueDate = listItem.dueDate;
         
-        var newDueDateArr = [];
-        newDueDateArr.push(dueDate.substr(0,4))
-        newDueDateArr.push(dueDate.substr(4,2))
-        newDueDateArr.push(dueDate.substr(6,2))
-        listItem.dueDate = newDueDateArr.join("-");
+        if (dueDate.indexOf("-") === -1 ){
+          var newDueDateArr = [];
+          newDueDateArr.push(dueDate.substr(0,4))
+          newDueDateArr.push(dueDate.substr(4,2))
+          newDueDateArr.push(dueDate.substr(6,2))
+          listItem.dueDate = newDueDateArr.join("-");
+        }
+        
 
         todayListDatas[index].listItems.push(listItem);
         
